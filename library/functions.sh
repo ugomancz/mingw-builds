@@ -926,20 +926,20 @@ function func_check_user_toolchain {
 		i686)
 			func_check_user_toolchain_exe "$1/mingw32/bin" gcc
 			func_check_user_toolchain_exe "$1/mingw32/bin" ld
-			func_check_user_toolchain_exe "$1/mingw32/bin" mingw32-make
+			#func_check_user_toolchain_exe "$1/mingw32/bin" mingw32-make
 			;;
 		x86_64)
 			func_check_user_toolchain_exe "$1/mingw64/bin" gcc
 			func_check_user_toolchain_exe "$1/mingw64/bin" ld
-			func_check_user_toolchain_exe "$1/mingw64/bin" mingw32-make
+			#func_check_user_toolchain_exe "$1/mingw64/bin" mingw32-make
 			;;
 		both)
 			func_check_user_toolchain_exe "$1/mingw32/bin" gcc
 			func_check_user_toolchain_exe "$1/mingw32/bin" ld
-			func_check_user_toolchain_exe "$1/mingw32/bin" mingw32-make
+			#func_check_user_toolchain_exe "$1/mingw32/bin" mingw32-make
 			func_check_user_toolchain_exe "$1/mingw64/bin" gcc
 			func_check_user_toolchain_exe "$1/mingw64/bin" ld
-			func_check_user_toolchain_exe "$1/mingw64/bin" mingw32-make
+			#func_check_user_toolchain_exe "$1/mingw64/bin" mingw32-make
 			;;
 	esac
 }
