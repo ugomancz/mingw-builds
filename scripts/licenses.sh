@@ -49,8 +49,10 @@ function func_get_licenses {
 	local readonly python_part=(
 		mingw-libgnurx
 		bzip2
+		termcap
 		libffi
 		expat
+		gdbm
 		tcl
 		tk
 		xz
