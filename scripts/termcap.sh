@@ -47,7 +47,15 @@ PKG_PRIORITY=extra
 
 #
 
-PKG_PATCHES=()
+PKG_PATCHES=(
+	termcap/include-io-header.patch
+)
+
+#
+
+PKG_EXECUTE_AFTER_PATCH=(
+	"autoreconf -vfi"
+)
 
 #
 
