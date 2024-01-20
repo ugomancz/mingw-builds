@@ -60,6 +60,7 @@ PKG_PATCHES=(
 	gcc/gcc-12-replace-abort-with-fancy_abort.patch
 	gcc/gcc-13-mcf-sjlj-avoid-infinite-recursion.patch
 	gcc/gcc-13-fix-radix-sort-on-32bit-platforms.patch
+	gcc/gcc-13-lto-wrapper-skip-truncating-input-files.patch
 )
 
 #
