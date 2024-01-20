@@ -49,6 +49,11 @@ PKG_NAME=mingw-w64-${RUNTIME_VERSION}
 	PKG_URLS=(
 		"https://git.code.sf.net/p/mingw-w64/mingw-w64|branch:$RUNTIME_BRANCH|repo:$PKG_TYPE"
 	)
+	[[ $RUNTIME_BRANCH == master ]] && {
+		PKG_EXECUTE_AFTER_UNCOMPRESS=(
+			"git reset --hard 57f796c80bfac3c75725e4e7a086afe43968b3ae" # Reset to this commit hash for reproducible builds
+		)
+	}
 }
 
 PKG_DIR_NAME=mingw-w64${MINGW_PKG_DIR_VERSION_SUFFIX}
