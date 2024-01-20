@@ -438,7 +438,6 @@ function func_download {
 					--tries=$_WGET_TRIES \
 					--timeout=$_WGET_TIMEOUT \
 					--wait=$_WGET_WAIT \
-					--no-check-certificate \
 					$_url -O $_lib_name > $_log_name 2>&1
 				_result=$?
 			}
