@@ -190,10 +190,10 @@ esac
 
 # **************************************************************************
 
-echo -n "-> Checking for installed packages... "
-func_test_installed_packages
-[[ $? == 1 ]] && exit 1
-echo "done"
+#echo -n "-> Checking for installed packages... "
+#func_test_installed_packages
+#[[ $? == 1 ]] && exit 1
+#echo "done"
 
 # **************************************************************************
 
