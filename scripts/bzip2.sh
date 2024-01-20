@@ -35,7 +35,7 @@
 
 # **************************************************************************
 
-PKG_VERSION=1.0.6
+PKG_VERSION=1.0.8
 PKG_NAME=bzip2-${PKG_VERSION}
 PKG_DIR_NAME=bzip2-${PKG_VERSION}
 PKG_TYPE=.tar.gz
@@ -50,10 +50,8 @@ PKG_PRIORITY=extra
 #
 
 PKG_PATCHES=(
-	bzip2/bzip2-1.0.4-bzip2recover.patch
 	bzip2/bzip2-1.0.6-autoconfiscated.patch
 	bzip2/bzip2-use-cdecl-calling-convention.patch
-	bzip2/bzip2-1.0.5-slash.patch
 )
 
 #
