@@ -67,7 +67,7 @@ function func_compress_mingw() {
 
 		[[ ! -f $ARCHIVE_NAME ]] && {
 			echo -n "---> \"$(basename $ARCHIVE_NAME)\" ... "
-			( cd $BUILDS_DIR && 7za a -t7z -mx=9 -mfb=64 -md=64m -ms=on \
+			( cd $BUILDS_DIR && 7za a -l -t7z -mx=9 -mfb=64 -md=64m -ms=on \
 				"$ARCHIVE_NAME" "$PREFIX" >/dev/null 2>&1 \
 			)
 			[[ $? == 0 ]] && {
