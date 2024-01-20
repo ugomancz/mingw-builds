@@ -35,12 +35,12 @@
 
 # **************************************************************************
 
-PKG_VERSION=6.2.1
+PKG_VERSION=6.3.0
 PKG_NAME=$BUILD_ARCHITECTURE-gmp-${PKG_VERSION}-$LINK_TYPE_SUFFIX
 PKG_DIR_NAME=gmp-${PKG_VERSION}
 PKG_TYPE=.tar.xz
 PKG_URLS=(
-	"https://ftpmirror.gnu.org/gmp/gmp-${PKG_VERSION}${PKG_TYPE}"
+	"https://ftpmirror.gnu.org/gnu/gmp/gmp-${PKG_VERSION}${PKG_TYPE}"
 )
 
 PKG_PRIORITY=prereq
