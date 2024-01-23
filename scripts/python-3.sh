@@ -55,6 +55,9 @@ PKG_EXECUTE_AFTER_UNCOMPRESS=(
 
 PKG_PATCHES=(
 	Python3/python-3.11-remove-WASM_STDLIB-target.patch
+	Python3/python-3.11-_cursesmodule-fix-array-type.patch
+	Python3/python-3.11-fix-incompatible-pointer-types.patch
+	Python3/python-3.11-temporary-workaround-for-_decimal.patch
 )
 
 #
