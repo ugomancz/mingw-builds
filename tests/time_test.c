@@ -38,6 +38,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <errno.h>
+#include <process.h>
 #include <windows.h>
 
 #define POW10_3                 1000
