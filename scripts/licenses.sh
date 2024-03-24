@@ -72,6 +72,7 @@ function func_get_licenses {
 		cloog
 		libiconv
 		zlib
+		zstd
 		$( [[ $THREADS_MODEL == mcf ]] && echo mcfgthread )
 		mingw-w64
 		winpthreads
