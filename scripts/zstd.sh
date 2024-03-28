@@ -35,7 +35,7 @@
 
 # **************************************************************************
 
-PKG_VERSION=1.5.5
+PKG_VERSION=1.5.6
 PKG_NAME=$BUILD_ARCHITECTURE-zstd-${PKG_VERSION}-$LINK_TYPE_SUFFIX
 PKG_DIR_NAME=zstd-${PKG_VERSION}
 PKG_TYPE=.tar.gz
