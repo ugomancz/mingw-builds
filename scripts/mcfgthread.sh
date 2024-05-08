@@ -47,7 +47,9 @@ PKG_PRIORITY=prereq
 
 #
 
-PKG_PATCHES=()
+PKG_PATCHES=(
+	mcfgthread/mcfgthread-1.6-fwd-Move-__MCF_static_assert.patch
+)
 
 #
 
