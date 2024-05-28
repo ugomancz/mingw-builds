@@ -35,21 +35,25 @@
 
 # **************************************************************************
 
-PKG_VERSION=1.6-ga.1
+PKG_VERSION=1.6
 PKG_NAME=$PKG_ARCHITECTURE-mcfgthread-${PKG_VERSION}
 PKG_DIR_NAME=mcfgthread-${PKG_VERSION}
-PKG_TYPE=.tar.gz
+PKG_TYPE=git
 PKG_URLS=(
-	"https://github.com/lhmouse/mcfgthread/archive/refs/tags/v${PKG_VERSION}${PKG_TYPE}"
+	"https://github.com/lhmouse/mcfgthread.git|branch:releases/v$PKG_VERSION|repo:$PKG_TYPE|module:$PKG_DIR_NAME"
 )
 
 PKG_PRIORITY=prereq
 
 #
 
-PKG_PATCHES=(
-	mcfgthread/mcfgthread-1.6-fwd-Move-__MCF_static_assert.patch
+PKG_EXECUTE_AFTER_UNCOMPRESS=(
+	"git reset --hard c4f164cac9d6022ae327b31147106d8ff9c27ac2" # Reset to this commit hash for reproducible builds
 )
+
+#
+
+PKG_PATCHES=()
 
 #
 
