@@ -39,8 +39,9 @@ PKG_VERSION=4.4.1
 PKG_NAME=make-${PKG_VERSION}
 PKG_DIR_NAME=make-${PKG_VERSION}
 PKG_TYPE=.tar.gz
+PKG_SHA256=dd16fb1d67bfab79a72f5e8390735c49e3e8e70b4945a15ab1f81ddb78658fb3
 PKG_URLS=(
-	"https://ftpmirror.gnu.org/gnu/make/make-${PKG_VERSION}${PKG_TYPE}"
+	"https://ftpmirror.gnu.org/gnu/make/make-${PKG_VERSION}${PKG_TYPE}|sha256:${PKG_SHA256}"
 )
 
 #

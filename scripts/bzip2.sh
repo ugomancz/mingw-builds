@@ -39,10 +39,11 @@ PKG_VERSION=1.0.8
 PKG_NAME=bzip2-${PKG_VERSION}
 PKG_DIR_NAME=bzip2-${PKG_VERSION}
 PKG_TYPE=.tar.gz
+PKG_SHA256=ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
 PKG_URLS=(
 	# Original website is gone.
 	#"http://www.bzip.org/${PKG_VERSION}/${PKG_DIR_NAME}${PKG_TYPE}"
-	"https://sourceware.org/pub/bzip2/${PKG_DIR_NAME}${PKG_TYPE}"
+	"https://sourceware.org/pub/bzip2/${PKG_DIR_NAME}${PKG_TYPE}|sha256:${PKG_SHA256}"
 )
 
 PKG_PRIORITY=extra

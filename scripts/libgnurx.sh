@@ -39,9 +39,10 @@ PKG_VERSION=2.8.0
 PKG_NAME=libgnurx-${PKG_VERSION}
 PKG_DIR_NAME=libgnurx-${PKG_VERSION}
 PKG_TYPE=.tar.xz
+PKG_SHA256=8afa3d465b198fca86214af0ab87dadac90f5c2f3a71e6366c2b3a3f7cadd983
 PKG_URLS=(
 	# "https://sourceforge.net/projects/mingw/files/Other/UserContributed/regex/mingw-regex-${PKG_VERSION}/mingw-libgnurx-${PKG_VERSION}-src.tar.gz"
-	"https://github.com/Furniel/libgnurx/releases/download/${PKG_VERSION}/${PKG_NAME}${PKG_TYPE}"
+	"https://github.com/Furniel/libgnurx/releases/download/${PKG_VERSION}/${PKG_NAME}${PKG_TYPE}|sha256:${PKG_SHA256}"
 )
 
 PKG_PRIORITY=extra

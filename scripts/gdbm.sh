@@ -39,8 +39,9 @@ PKG_VERSION=1.19
 PKG_NAME=gdbm-${PKG_VERSION}
 PKG_DIR_NAME=gdbm-${PKG_VERSION}
 PKG_TYPE=.tar.gz
+PKG_SHA256=37ed12214122b972e18a0d94995039e57748191939ef74115b1d41d8811364bc
 PKG_URLS=(
-	"https://ftpmirror.gnu.org/gnu/gdbm/gdbm-${PKG_VERSION}${PKG_TYPE}"
+	"https://ftpmirror.gnu.org/gnu/gdbm/gdbm-${PKG_VERSION}${PKG_TYPE}|sha256:${PKG_SHA256}"
 )
 PKG_PRIORITY=extra
 

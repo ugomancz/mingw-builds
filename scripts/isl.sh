@@ -35,29 +35,13 @@
 
 # **************************************************************************
 
-if [[ `echo $BUILD_VERSION | cut -d. -f1` == 4 && `echo $BUILD_VERSION | cut -d. -f2` -le 8 ]] || [[ `echo $BUILD_VERSION | cut -d. -f1` == 4 && `echo $BUILD_VERSION | cut -d. -f2` == 9 && `echo $BUILD_VERSION | cut -d. -f3` -le 2 ]]; then
-   PKG_VERSION=0.12.2
-   PKG_TYPE=.tar.lzma
-elif [[ `echo $BUILD_VERSION | cut -d. -f1` == 4 ]] || [[ `echo $BUILD_VERSION | cut -d. -f1` == 5 && `echo $BUILD_VERSION | cut -d. -f2` -le 2 ]]; then
-   PKG_VERSION=0.14.1
-   PKG_TYPE=.tar.xz
-elif [[ `echo $BUILD_VERSION | cut -d. -f1` == 5 ]]; then
-   PKG_VERSION=0.18
-   PKG_TYPE=.tar.xz
-elif [[ `echo $BUILD_VERSION | cut -d. -f1` -le 7 && ${BUILD_VERSION} != trunk ]]; then
-   PKG_VERSION=0.19
-   PKG_TYPE=.tar.xz
-elif [[ `echo $BUILD_VERSION | cut -d. -f1` -le 10 && ${BUILD_VERSION} != trunk ]]; then
-   PKG_VERSION=0.23
-   PKG_TYPE=.tar.xz
-else
-   PKG_VERSION=0.26
-   PKG_TYPE=.tar.xz
-fi
+PKG_VERSION=0.26
+PKG_TYPE=.tar.xz
 PKG_NAME=$BUILD_ARCHITECTURE-isl-${PKG_VERSION}-$LINK_TYPE_SUFFIX
 PKG_DIR_NAME=isl-${PKG_VERSION}
+PKG_SHA256=a0b5cb06d24f9fa9e77b55fabbe9a3c94a336190345c2555f9915bb38e976504
 PKG_URLS=(
-	"https://libisl.sourceforge.io/isl-${PKG_VERSION}${PKG_TYPE}"
+	"https://libisl.sourceforge.io/isl-${PKG_VERSION}${PKG_TYPE}|sha256:${PKG_SHA256}"
 )
 
 PKG_PRIORITY=prereq

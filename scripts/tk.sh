@@ -40,8 +40,9 @@ PKG_NAME=tk${PKG_VERSION}
 PKG_DIR_NAME=tk${PKG_VERSION}
 PKG_SUBDIR_NAME=win
 PKG_TYPE=.tar.gz
+PKG_SHA256=12395c1f3fcb6bed2938689f797ea3cdf41ed5cb6c4766eec8ac949560310630
 PKG_URLS=(
-	"https://prdownloads.sourceforge.net/tcl/tk${PKG_VERSION}-src${PKG_TYPE}"
+	"https://prdownloads.sourceforge.net/tcl/tk${PKG_VERSION}-src${PKG_TYPE}|sha256:${PKG_SHA256}"
 )
 
 PKG_PRIORITY=extra

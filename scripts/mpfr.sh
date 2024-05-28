@@ -39,8 +39,9 @@ PKG_VERSION=4.2.1
 PKG_NAME=$BUILD_ARCHITECTURE-mpfr-${PKG_VERSION}-$LINK_TYPE_SUFFIX
 PKG_DIR_NAME=mpfr-${PKG_VERSION}
 PKG_TYPE=.tar.xz
+PKG_SHA256=277807353a6726978996945af13e52829e3abd7a9a5b7fb2793894e18f1fcbb2
 PKG_URLS=(
-	"https://ftpmirror.gnu.org/gnu/mpfr/mpfr-${PKG_VERSION}${PKG_TYPE}"
+	"https://ftpmirror.gnu.org/gnu/mpfr/mpfr-${PKG_VERSION}${PKG_TYPE}|sha256:${PKG_SHA256}"
 )
 
 PKG_PRIORITY=prereq
