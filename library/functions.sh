@@ -45,6 +45,7 @@ function func_clear_env {
 	unset PKG_PRIORITY
 	unset PKG_TYPE
 	unset PKG_REVISION
+	unset PKG_SHA256
 	unset PKG_URLS
 	unset PKG_LNDIR
 	unset PKG_EXECUTE_AFTER_DOWNLOAD
@@ -332,6 +333,7 @@ function func_download {
 		local _dir=
 		local _root=$SRCS_DIR
 		local _module=
+		local _sha256=
 		local _lib_name=
 
 		local _index=1
@@ -344,6 +346,7 @@ function func_download {
 				repo)   _repo=${_params2[1]} ;;
 				rev)    _rev=${_params2[1]} ;;
 				root)   _root=${_params2[1]} ;;
+				sha256) _sha256=${_params2[1]} ;;
 			esac
 			_index=$(($_index+1))
 		done
@@ -440,6 +443,10 @@ function func_download {
 					--wait=$_WGET_WAIT \
 					$_url -O $_lib_name > $_log_name 2>&1
 				_result=$?
+				[[ $_result == 0 && -n $_sha256 ]] && {
+					echo "$_sha256 $_lib_name" | sha256sum --check >> $_log_name 2>&1
+					_result=$?
+				}
 			}
 			[[ $_result == 0 ]] && {
 				echo " done"
