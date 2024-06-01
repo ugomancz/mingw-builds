@@ -35,31 +35,20 @@
 
 # **************************************************************************
 
-PKG_VERSION=5.4.5
+PKG_VERSION=5.6.2
 PKG_NAME=xz-${PKG_VERSION}
 PKG_DIR_NAME=xz-${PKG_VERSION}
-PKG_TYPE=git
+PKG_TYPE=.tar.xz
+PKG_SHA256=a9db3bb3d64e248a0fae963f8fb6ba851a26ba1822e504dc0efd18a80c626caf
 PKG_URLS=(
-	"https://github.com/tukaani-project/xz.git|branch:v$(echo $PKG_VERSION | cut -d. -f-2)|repo:$PKG_TYPE|module:$PKG_NAME"
+	"https://github.com/tukaani-project/xz/releases/download/v${PKG_VERSION}/xz-${PKG_VERSION}${PKG_TYPE}|sha256:${PKG_SHA256}"
 )
 
 PKG_PRIORITY=extra
 
 #
 
-PKG_EXECUTE_AFTER_UNCOMPRESS=(
-	"git reset --hard 49053c0a649f4c8bd2b8d97ce915f401fbc0f3d9" # Reset to this commit hash for reproducible builds
-)
-
-#
-
 PKG_PATCHES=()
-
-#
-
-PKG_EXECUTE_AFTER_PATCH=(
-	"./autogen.sh --no-po4a --no-doxygen"
-)
 
 #
 
