@@ -52,6 +52,12 @@ PKG_PATCHES=()
 
 #
 
+PKG_EXECUTE_AFTER_PATCH=(
+	"./autogen.sh --no-po4a"
+)
+
+#
+
 PKG_CONFIGURE_FLAGS=(
 	--host=$HOST
 	--build=$BUILD
