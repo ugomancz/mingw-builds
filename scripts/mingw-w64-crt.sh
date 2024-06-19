@@ -69,7 +69,7 @@ PKG_PATCHES=(
 #
 
 PKG_EXECUTE_AFTER_PATCH=(
-	"automake"
+	"autoreconf -i"
 )
 
 #
