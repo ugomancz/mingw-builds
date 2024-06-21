@@ -35,12 +35,13 @@
 
 # **************************************************************************
 
-PKG_VERSION=12
-PKG_NAME=gcc-${PKG_VERSION}-branch
-PKG_DIR_NAME=gcc-${PKG_VERSION}-branch
-PKG_TYPE=git
+PKG_VERSION=12.4.0
+PKG_NAME=gcc-${PKG_VERSION}
+PKG_DIR_NAME=gcc-${PKG_VERSION}
+PKG_TYPE=.tar.xz
+PKG_SHA256=704f652604ccbccb14bdabf3478c9511c89788b12cb3bbffded37341916a9175
 PKG_URLS=(
-	"https://gcc.gnu.org/git/gcc.git|branch:releases/gcc-$PKG_VERSION|repo:$PKG_TYPE|module:$PKG_DIR_NAME"
+	"https://ftpmirror.gnu.org/gnu/gcc/gcc-${PKG_VERSION}/gcc-${PKG_VERSION}${PKG_TYPE}|sha256:${PKG_SHA256}"
 )
 
 PKG_PRIORITY=main
